@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".fragments_.QuizResultFragment">
+
+    <TextView
+        android:id="@+id/results_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/crimson_text"
+        android:text="@string/results"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp" />
+
+    <ProgressBar
+        android:id="@+id/results_progress"
+        style="?android:attr/progressBarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results_title"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="64dp" />
+
+    <TextView
+        android:id="@+id/results_percent"
+        app:layout_constraintBottom_toBottomOf="@+id/results_progress"
+        app:layout_constraintEnd_toEndOf="@+id/results_progress"
+        app:layout_constraintStart_toStartOf="@+id/results_progress"
+        app:layout_constraintTop_toTopOf="@+id/results_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/_100"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/results_correct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/correct_answers"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/results_wrong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/wrong_answers"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/results_missed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results_wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/questions_missed"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/results_correct_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/results_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/na"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/results_wrong_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results_correct_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/na"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/results_missed_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results_wrong_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/na"
+        android:textColor="@color/colorLightText"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/results_home_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/primary_btn_bg"
+        android:fontFamily="@font/work_sans"
+        android:text="@string/go_to_home"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

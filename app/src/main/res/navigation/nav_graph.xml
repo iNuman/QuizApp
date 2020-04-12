@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/quizAppSplashScreen">
+
+    <fragment
+        android:id="@+id/quizAppSplashScreen"
+        android:name="i.numan.quizapp.splash_.QuizAppSplashScreen"
+        android:label="fragment_quiz_app_splash_screen"
+        tools:layout="@layout/fragment_quiz_app_splash_screen">
+        <action
+            android:id="@+id/action_quizAppSplashScreen_to_quizListFragment"
+            app:destination="@id/quizListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/quizAppSplashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizListFragment"
+        android:name="i.numan.quizapp.fragments_.QuizListFragment"
+        android:label="fragment_quiz_list"
+        tools:layout="@layout/fragment_quiz_list">
+        <action
+            android:id="@+id/action_quizListFragment_to_quizDetailsFragment"
+            app:destination="@id/quizDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizDetailsFragment"
+        android:name="i.numan.quizapp.fragments_.QuizDetailsFragment"
+        android:label="fragment_quiz_details"
+        tools:layout="@layout/fragment_quiz_details">
+        <action
+            android:id="@+id/action_quizDetailsFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down"/>
+        <argument
+            android:name="position"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="i.numan.quizapp.fragments_.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/action_quizFragment_to_quizResultFragment"
+            app:destination="@id/quizResultFragment" />
+        <argument
+            android:name="quizid"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="total_questions"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="quizName"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="i.numan.quizapp.fragments_.QuizResultFragment"
+        android:label="fragment_quiz_result"
+        tools:layout="@layout/fragment_quiz_result" >
+        <argument
+            android:name="quizId"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="totalQuestions"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+</navigation>
