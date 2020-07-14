@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import i.numan.quizapp.R
 import i.numan.quizapp.adapters_.QuizListRecyclerView
@@ -32,6 +33,7 @@ class QuizListFragment : Fragment(R.layout.fragment_quiz_list), QuizListRecycler
         * We'll pass action here as it performs action in navigation graph
         * And the details fragment will have arguments as arguments defined here
          */
+//        findNavController().navigate(R.id.action_quizListFragment_to_quizDetailsFragment, position)
         val action =
             QuizListFragmentDirections
                 .actionQuizListFragmentToQuizDetailsFragment(position = position)

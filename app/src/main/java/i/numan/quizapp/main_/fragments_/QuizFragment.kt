@@ -345,7 +345,7 @@ class QuizFragment : Fragment(R.layout.fragment_quiz), View.OnClickListener {
 //                Wrong
                 println("ffnet: Wrong Answer")
                 wrongAnswers++
-                selectedAnswerBtn.background = resources.getDrawable(R.drawable.wrong_answer_bg)
+                selectedAnswerBtn.background = resources.getDrawable(R.drawable.wrong_answer_bg, null)
                 quiz_question_feedback.apply {
                     text =
                         "Wrong Answer \n Correct Answer: ${questionsToAnswer[currentQuestion].answer}"

@@ -83,7 +83,7 @@ class QuizListRecyclerView(private val interaction: Interaction? = null) :
                 /*
                 * it'll get the position of the clicked item with item
                  */
-                interaction!!.onItemSelected(adapterPosition, item)
+                interaction?.onItemSelected(adapterPosition, item)
             }
 
         }

@@ -24,7 +24,6 @@
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="invisible"
         android:layout_marginTop="@dimen/top_padding_list_fragment"
         tools:listitem="@layout/single_list_item"
         app:layout_constraintBottom_toBottomOf="parent"
